@@ -15,7 +15,7 @@ include_once 'Ab.php';
     <div class="content_div">
         <div class="container sticky">
             <div class="topnav">
-                <a href="index.php">Kőoldal</a>
+                <a href="index.php">Főoldal</a>
                 <a href="tablazat.php">Táblázat</a>
                 <a href="#">Rendezett kártyák</a>
                 <a href="#">Kártyák osztály használatával</a>
