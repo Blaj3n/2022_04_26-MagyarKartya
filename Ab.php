@@ -61,4 +61,15 @@ class Ab
         $adatok = $this->kapcsolat->query($sql);
         return $adatok;
     }
+    function adatLekerTablazatos($oszlop1, $oszlop2, $tabla)
+    {
+        $sql = "SELECT $oszlop1, $oszlop2 FROM $tabla ORDER BY $oszlop1";
+        $result = $this->kapcsolat->query($sql);
+        echo "<table><tr><th>Név</th><th>Kép</th></tr>";
+        while($row = $result->fetch_assoc()){
+            echo "<tr><td>". $row[$oszlop2]."</td><td><img src = \ "forras/".$row[$oszlop1]."\" alt=\"kártya képe\">
+            </td></tr>";
+            echo "</table>";
+        }
+    }
 }
