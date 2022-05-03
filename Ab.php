@@ -61,6 +61,10 @@ class Ab
         $adatok = $this->kapcsolat->query($sql);
         return $adatok;
     }
+
+    function kapcsolatBezar(){
+        $this->kapcsolat->close();
+    }
     function adatLekerTablazatos($oszlop1, $oszlop2, $tabla)
     {
         $sql = "SELECT $oszlop1, $oszlop2 FROM $tabla ORDER BY $oszlop1";
