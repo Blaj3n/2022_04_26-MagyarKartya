@@ -29,9 +29,25 @@ include_once 'Ab.php';
         //ha nincs feltöltve, akkor feltölti
         //echo gettype($kepek);
         //while ($sor = $kepek->fetch_row()) {
-            //echo $sor[1];
-            //echo "<img id='kicsi' src='forras/$sor[0]' alt='$sor[0]'>";
+        //echo $sor[1];
+        //echo "<img id='kicsi' src='forras/$sor[0]' alt='$sor[0]'>";
         //}
+        $kepek = $adatbazis->adatLeker('kep', 'szin');
+        $nev = $adatbazis->adatLeker('nev', 'szin');
+        $kepekTomb = $adatbazis->tombKeszit($kepek);
+        $nevTomb = $adatbazis->tombKeszit($nev);
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>Kép</th>";
+        echo "<th>Név</th>";
+        echo "</tr>";
+
+        for ($i = 0; $i < count($nevTomb) && count($kepekTomb); $i++) {
+            echo "<tr>";
+            echo "<td><img id='kicsi' src='forras/$kepekTomb[$i]' alt='$kepekTomb[$i]'></td><td>$nevTomb[$i]</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
         ?>
     </div>
 
