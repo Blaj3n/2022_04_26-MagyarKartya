@@ -27,14 +27,11 @@ include_once 'Ab.php';
         <?php
         $adatbazis = new Ab();
         //ha nincs feltöltve, akkor feltölti
-        if ($adatbazis->azonMind('kartya') < 10)
-            $adatbazis->kartyaFeltolt('kartya');
-        $kepek = $adatbazis->adatLeker('kep', 'szin');
         //echo gettype($kepek);
-        while ($sor = $kepek->fetch_row()) {
+        //while ($sor = $kepek->fetch_row()) {
             //echo $sor[1];
-            echo "<img id='kicsi' src='forras/$sor[0]' alt='$sor[0]'>";
-        }
+            //echo "<img id='kicsi' src='forras/$sor[0]' alt='$sor[0]'>";
+        //}
         ?>
     </div>
 
