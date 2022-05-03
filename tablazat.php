@@ -42,7 +42,7 @@ include_once 'Ab.php';
         echo "<th>Név</th>";
         echo "</tr>";
 
-        for ($i = 0; $i < count($nevTomb) && count($kepekTomb); $i++) {
+        for ($i = 0; $i < count($nevTomb); $i++) {
             echo "<tr>";
             echo "<td><img id='kicsi' src='forras/$kepekTomb[$i]' alt='$kepekTomb[$i]'></td><td>$nevTomb[$i]</td>";
             echo "</tr>";
