@@ -79,7 +79,7 @@ class Ab
         $result = $this->kapcsolat->query($sql);
         echo "<table><tr><th>Név</th><th>Kép</th></tr>";
         while($row = $result->fetch_assoc()){
-            echo "<tr><td>". $row[$oszlop2]."</td><td><img src = \ "forras/".$row[$oszlop1]."\" alt=\"kártya képe\">
+            echo "<tr><td>". $row[$oszlop2]."</td><td><img src=\"forras/".$row[$oszlop1]."\" alt=\"kártya képe\">
             </td></tr>";
             echo "</table>";
         }
