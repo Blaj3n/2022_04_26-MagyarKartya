@@ -65,6 +65,14 @@ class Ab
     function kapcsolatBezar(){
         $this->kapcsolat->close();
     }
+
+    function tombKeszit($phpTomb){
+        $tomb = array();
+        while ($sor = $phpTomb->fetch_row()){
+            $tomb[] = $row[0];
+        }
+        return $tomb;
+    }
     function adatLekerTablazatos($oszlop1, $oszlop2, $tabla)
     {
         $sql = "SELECT $oszlop1, $oszlop2 FROM $tabla ORDER BY $oszlop1";
