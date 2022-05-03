@@ -69,7 +69,7 @@ class Ab
     function tombKeszit($phpTomb){
         $tomb = array();
         while ($sor = $phpTomb->fetch_row()){
-            $tomb[] = $row[0];
+            $tomb[] = $sor[0];
         }
         return $tomb;
     }
@@ -79,8 +79,7 @@ class Ab
         $result = $this->kapcsolat->query($sql);
         echo "<table><tr><th>Név</th><th>Kép</th></tr>";
         while($row = $result->fetch_assoc()){
-            echo "<tr><td>". $row[$oszlop2]."</td><td><img src=\"forras/".$row[$oszlop1]."\" alt=\"kártya képe\">
-            </td></tr>";
+            echo "<tr><td>". $row[$oszlop1]."</td><td><img src=\"forras/".$row[$oszlop2]."\" alt=\"kártya képe\"></td></tr>";
             echo "</table>";
         }
     }
